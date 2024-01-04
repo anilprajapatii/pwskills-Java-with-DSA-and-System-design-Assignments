@@ -1,0 +1,17 @@
+1. What is Programming language?
+Ans : A programming language is a set of instructions and rules used to communicate with computers to create software, applications, and perform various tasks. It serves as an intermediary between humans and machines, enabling programmers to write code that computers can understand and execute.
+
+2. Why do we need a programming language?
+Ans : Programming languages are essential as they allow humans to convey complex instructions to computers in a structured and understandable manner. They facilitate the development of software, enable problem-solving, automation, and the creation of technological advancements by translating human logic into machine-readable code.
+
+3. What are the features of Java?
+Ans : Java is known for its platform independence, object-oriented nature, robustness, security, and simplicity. It uses automatic memory management (garbage collection), has a rich set of libraries and APIs, supports multithreading, and offers portability across different operating systems.
+
+4. What is an Object?
+Ans : In programming, an object is a fundamental unit that combines data and functionality. It represents a real-world entity and encapsulates its properties (data) and behaviors (functions/methods). Objects are instances of classes and can interact with each other through method calls.
+
+5. What is a class?
+Ans : A class in programming is a blueprint or template that defines the properties and behaviors common to a group of objects. It encapsulates data in the form of fields/attributes and methods/functions that operate on the data. Objects are created based on these classes.
+
+6. Explain about the main() method in Java?
+Ans : The main() method in Java is the entry point for any Java application. It serves as the starting point for the execution of the program. Java programs begin execution from the main() method, which must be declared as public, static, and void. It takes an array of strings (String[]) as an argument, allowing command-line arguments to be passed to the program. Code inside the main() method defines the sequence of actions executed when the program runs.
