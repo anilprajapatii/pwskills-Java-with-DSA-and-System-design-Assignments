@@ -1,0 +1,36 @@
+1. What's a statically typed and dynamically typed programming language?
+Ans : Statically typed: Requires explicit declaration of variable types at compile time (e.g., Java). Ensures type safety before execution.
+    Dynamically typed: Allows variables to hold any type, determining types at runtime (e.g., Python). Offers flexibility but may lead to runtime errors.
+
+2. What is a variable in Java?
+Ans :  A variable in Java represents a named memory location used to store data. It must have a specific data type declaration before being used.
+
+3. How do you assign a value to a variable in Java?
+Ans : Utilize the assignment operator '=' to assign values to declared variables. For instance:
+     java
+     int x; // Declaring a variable x of type int
+     x = 10; // Assigning the value 10 to x
+     
+
+4. What are primitive data types in Java?
+Ans : Primitive data types (e.g., int, double, boolean) in Java directly hold basic values like integers, floating-point numbers, or true/false values.
+
+5. What are identifiers in Java?
+Ans : Identifiers in Java are names for classes, methods, variables, etc. They follow specific rules, starting with a letter, $, or _, and are case-sensitive. They can't be Java keywords.
+
+6. List the operators in Java.
+Ans : Java supports various operators including arithmetic (+, -, *, /, %), assignment (=), comparison (==, !=, >, <, >=, <=), logical (&&, ||, !), bitwise (&, |, ^, ~, <<, >>, >>>), and increment/decrement (++ and --) operators.
+
+7. Explain increment and decrement operators in Java with examples.
+Ans : Increment (++) adds 1 to a variable.
+     java
+     int a = 5;
+     a++; // Increases the value of a by 1
+     // Result: a is now 6
+     
+     Decrement (--) subtracts 1 from a variable.
+     java
+     int b = 8;
+     b--; // Decreases the value of b by 1
+     // Result: b is now 7
+     
