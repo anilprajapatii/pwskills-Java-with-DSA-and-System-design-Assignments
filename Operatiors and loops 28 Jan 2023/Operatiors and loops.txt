@@ -42,3 +42,14 @@ Ans :Three types of iterative statements in Java:
 Ans : Difference between for loop and do-while loop:
    - "for" loop: It's used when the number of iterations is known beforehand. It consists of initialization, condition, and increment/decrement sections.
    - "do-while" loop: It's used when the loop body needs to be executed at least once, regardless of the condition. It checks the condition at the end of the loop.
+
+9. Write a program to print numbers from 1 to 10.
+Ans : Java Program :  
+public class PrintNumbers {
+    public static void main(String[] args) {
+        // Using a for loop to print numbers from 1 to 10
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
