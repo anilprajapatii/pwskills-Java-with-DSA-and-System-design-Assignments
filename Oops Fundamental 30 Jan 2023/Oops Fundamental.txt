@@ -1,0 +1,22 @@
+1.How to Create an Object in Java?
+Ans : To create an object in Java, you use the "new" keyword followed by the class name and parentheses. For example: "ClassName objectName = new ClassName();". This allocates memory for the object and initializes it, calling the constructor of the class.
+
+2.What is the use of the "new" keyword in Java?
+Ans : The "new" keyword in Java is used to dynamically allocate memory for an object at runtime. It is primarily employed to create instances of classes, initializing them with default constructors or constructors that match the provided arguments.
+
+3.What are the different types of variables in Java?
+Ans : In Java, variables are classified into three types: 
+   -Local variables: Declared inside methods, constructors, or blocks. 
+   -Instance variables (non-static fields): Belong to an object and are declared within a class but outside any method, constructor, or block.
+   -Static variables (class variables): Shared among all instances of a class and declared using the "static" keyword.
+
+4.What is the difference between Instance variable and Local variables?
+Ans : Instance variables are declared in a class but outside any method and are part of an object's state. They have default values and are initialized when an object is created. 
+Local variables are declared within a method, constructor, or block and exist only within that scope. They must be explicitly initialized before use and do not have default values.
+
+5.In which area memory is allocated for instance variable and local variable?
+Ans : Instance variables are stored in the heap memory area. Each object has its separate memory allocation for its instance variables.
+Local variables are stored in the stack memory area and only exist within the scope of the method, constructor, or block where they are declared.
+
+6.What is method overloading?
+Ans : Method overloading in Java refers to the ability to have multiple methods in a class with the same name but different parameters. These methods perform different tasks based on the number or type of parameters passed to them. Overloading allows developers to use the same method name for different behaviors, enhancing code readability and reusability.
