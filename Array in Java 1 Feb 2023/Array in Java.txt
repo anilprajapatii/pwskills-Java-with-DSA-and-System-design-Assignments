@@ -1,0 +1,51 @@
+1. What do you mean by an Array?
+Ans : An array in Java is a data structure that holds a fixed-size collection of elements of the same data type. It allows storing multiple values of the same type under a single variable name.
+
+2. How to create an Array in Java?
+Ans : In Java, you can create an array by specifying the data type of its elements and providing the size using the `new` keyword.
+   Example:
+   java
+   int[] myArray = new int[5];
+   
+
+3. Can we change the size of an array at runtime in Java?
+Ans : No, in Java, once an array is created with a specific size, its size cannot be changed dynamically during runtime. You would need to create a new array of the desired size and copy the elements if you want to resize it.
+
+4. Can you declare an array without assigning the size of an array in Java?
+Ans : In Java, you can declare an array without specifying its size. However, you need to assign the size before using it.
+   Example:
+   java
+   int[] myArray; // Declaration
+   myArray = new int[5]; // Initializing with size
+   
+
+5. What is the default value of Array in Java?
+Ans : In Java, the default values for elements in an array are based on their data types. For example, integer arrays will have elements initialized to `0`, boolean arrays will have elements initialized to `false`, and object arrays will have elements initialized to `null`.
+
+6. What is a 1D array with an example in Java?
+Ans : A 1D array in Java represents a linear collection of elements of the same type.
+   Example:
+   java
+   int[] numbers = {1, 2, 3, 4, 5};
+   
+
+7. Write a program on a 2D array in Java:
+Ans : Here's an example of initializing and accessing elements in a 2D array in Java:
+   java
+   public class TwoDArrayExample {
+       public static void main(String[] args) {
+           int[][] matrix = {
+               {1, 2, 3},
+               {4, 5, 6},
+               {7, 8, 9}
+           };
+
+           for (int i = 0; i < matrix.length; i++) {
+               for (int j = 0; j < matrix[i].length; j++) {
+                   System.out.print(matrix[i][j] + " ");
+               }
+               System.out.println(); // Move to the next line for the next row
+           }
+       }
+   }
+   
