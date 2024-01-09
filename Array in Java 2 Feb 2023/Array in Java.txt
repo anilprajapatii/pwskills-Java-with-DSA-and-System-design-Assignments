@@ -1,0 +1,35 @@
+1. What is the default value of Array for different data types?
+Ans : The default values in Java arrays are:
+     - Numeric types (byte, short, int, long, float, double): 0
+     - boolean type: false
+     - char type: '\u0000' (null character)
+     - Reference types (objects and Strings): null
+
+2. Can you pass a negative number as Array size?
+Ans : No, it's not possible to pass a negative number as the size of an array in Java. The size must be a non-negative integer; otherwise, it will result in a runtime exception.
+
+3. Where does Array store in JVM memory?
+Ans : Arrays in Java are objects and are stored in the heap memory, the part of JVM memory reserved for the runtime allocation of objects.
+
+4. What are the disadvantages of Array?
+Ans : Some drawbacks of arrays include:
+     - Fixed size: Cannot dynamically resize once initialized.
+     - Lack of flexibility: Inability to easily add or remove elements without creating a new array.
+     - Homogeneity: All elements must be of the same data type.
+
+5. What is an Anonymous Array in Java? Give an example.
+Ans : An anonymous array is an array without a name, mainly used for immediate array creation and initialization. Example:
+    
+     int[] numbers = new int[] { 1, 2, 3, 4, 5 };
+     
+     Here, "new int[] { 1, 2, 3, 4, 5 }" represents an anonymous array.
+
+6. What are the different ways to traverse an Array in Java?
+Ans : Various ways to traverse an array:
+     - Using a for loop: "for (int i = 0; i < arr.length; i++) { // access arr[i] }"
+     - Using an enhanced for loop (for-each loop): "for (int element : arr) { // access element }"
+     - Using Java 8 Streams: "Arrays.stream(arr).forEach(element -> { // access element });"
+
+7. What is the difference between length and length() method? Give Examples.
+Ans : "length" is a property of arrays used to find the number of elements, e.g., "int[] arr = new int[5]; int size = arr.length;"
+      "length()" is a method used to find the length of a string in Java, e.g., "String str = "Hello"; int length = str.length();"
