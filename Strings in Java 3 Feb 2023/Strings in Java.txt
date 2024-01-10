@@ -1,0 +1,21 @@
+1. What is a String in Java?
+Ans : In Java, a "String" is a sequence of characters. It's a class that represents character strings. Strings are widely used in Java programming, and they are immutable, meaning their values cannot be changed once they are created.
+
+2. Types of String in Java are?
+Ans : In Java, there's primarily one type of String, which is the "java.lang.String" class. However, there are variations like "StringBuffer" and "StringBuilder" that provide mutable alternatives to "String". 
+
+3. In how many ways can you create string objects in Java?
+Ans : There are several ways to create String objects in Java:
+- Using a string literal: "String str = "Hello";"
+- Using the "new" keyword and the "String" constructor: "String str = new String("Hello");"
+- Using the "String" class's "valueOf()" method: "String str = String.valueOf(10);"
+
+4. What's a string constant pool?
+Ans : The string constant pool is a special memory area in Java's heap memory where string literals (strings created using double quotes) are stored. The JVM (Java Virtual Machine) creates a pool of strings to conserve memory by reusing literal strings rather than creating new instances every time they are used. This behavior is possible because strings are immutable.
+
+5. What do you mean by mutable and immutable objects?
+Ans : - Mutable objects: These are objects whose state (the values of their properties) can be changed after they are created. For example, "StringBuilder" and "StringBuffer" in Java allow modifications to their contents.
+- Immutable objects: These are objects whose state cannot be changed after they are created. In Java, "String" objects are immutable. Once a string object is created, its value cannot be altered.
+
+6. Where exactly is the string constant pool located in the memory?
+Ans : The string constant pool is part of the heap memory in the Java Virtual Machine (JVM). It's a separate area within the heap specifically dedicated to storing unique string literals during the program's execution.
