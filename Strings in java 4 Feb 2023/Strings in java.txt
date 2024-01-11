@@ -1,0 +1,119 @@
+1. Write a simple String program to take input from the user
+Ans : java
+import java.util.Scanner;
+
+public class UserInputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String userInput = scanner.nextLine();
+
+        System.out.println("You entered: " + userInput);
+
+        scanner.close();
+    }
+}
+
+
+ 2. How do you concatenate two strings in Java? Give an example?
+Ans : 
+In Java, you can concatenate two strings using the `+` operator or by using the `concat()` method.
+
+java
+public class ConcatenateStrings {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+
+        // Using +
+        String result1 = str1 + " " + str2;
+
+        // Using concat()
+        String result2 = str1.concat(" ").concat(str2);
+
+        System.out.println("Using +: " + result1);
+        System.out.println("Using concat(): " + result2);
+    }
+}
+
+
+ 3. How do you find the length of a string in Java? Explain with an example?
+Ans : 
+You can find the length of a string in Java using the `length()` method.
+
+java
+public class StringLengthExample {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        int length = str.length();
+
+        System.out.println("Length of the string: " + length);
+    }
+}
+
+
+ 4. How do you compare two strings in Java? Give an example.
+Ans : 
+You can compare two strings in Java using the `equals()` method for content comparison and `compareTo()` method for lexicographical comparison.
+
+java
+public class CompareStringsExample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+
+        // Content comparison
+        boolean contentEquals = str1.equals(str2);
+        System.out.println("Content Equals: " + contentEquals);
+
+        // Lexicographical comparison
+        int lexicographicalComparison = str1.compareTo(str2);
+        System.out.println("Lexicographical Comparison: " + lexicographicalComparison);
+    }
+}
+
+
+ 5. Write a program to find the length of the string "refrigerator".
+Ans : 
+java
+public class StringLengthExample {
+    public static void main(String[] args) {
+        String str = "refrigerator";
+        int length = str.length();
+
+        System.out.println("Length of the string: " + length);
+    }
+}
+
+
+ 6. Write a program to check if the letter ‘e' is present in the word ‘Umbrella’.
+Ans : 
+java
+public class CheckLetterExample {
+    public static void main(String[] args) {
+        String word = "Umbrella";
+        char targetLetter = 'e';
+
+        boolean isPresent = word.contains(String.valueOf(targetLetter));
+
+        if (isPresent) {
+            System.out.println("Letter 'e' is present in the word.");
+        } else {
+            System.out.println("Letter 'e' is not present in the word.");
+        }
+    }
+}
+
+
+ 7. Write a program to delete all consonants from the string "Hello, have a good day".
+Ans : 
+java
+public class DeleteConsonantsExample {
+    public static void main(String[] args) {
+        String str = "Hello, have a good day";
+        String result = str.replaceAll("[^aeiouAEIOU]", "");
+
+        System.out.println("String after removing consonants: " + result);
+    }
+}
