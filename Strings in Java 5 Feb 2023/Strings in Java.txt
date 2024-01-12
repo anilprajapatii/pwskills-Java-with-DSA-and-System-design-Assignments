@@ -1,0 +1,214 @@
+1. WAP to remove Duplicates from a String.
+Answer :
+import java.util.LinkedHashSet;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        String input = "helloo";
+        String result = removeDuplicates(input);
+        System.out.println("String after removing duplicates: " + result);
+    }
+
+    public static String removeDuplicates(String input) {
+        LinkedHashSet<Character> set = new LinkedHashSet<>();
+        for (char ch : input.toCharArray()) {
+            set.add(ch);
+        }
+        StringBuilder result = new StringBuilder();
+        for (char ch : set) {
+            result.append(ch);
+        }
+        return result.toString();
+    }
+}
+
+
+2. WAP to print Duplicates characters from the String.
+Answer :
+public class PrintDuplicates {
+    public static void main(String[] args) {
+        String input = "helloo";
+        printDuplicates(input);
+    }
+
+    public static void printDuplicates(String input) {
+        int[] charCount = new int[256];
+        for (char ch : input.toCharArray()) {
+            charCount[ch]++;
+        }
+        System.out.println("Duplicate characters in the string:");
+        for (int i = 0; i < charCount.length; i++) {
+            if (charCount[i] > 1) {
+                System.out.println((char) i + " ");
+            }
+        }
+    }
+}
+
+
+3. WAP to check if “2552” is palindrome or not.
+Answer :
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        String input = "2552";
+        boolean isPalindrome = checkPalindrome(input);
+        System.out.println("Is the string a palindrome? " + isPalindrome);
+    }
+
+    public static boolean checkPalindrome(String input) {
+        StringBuilder reversed = new StringBuilder(input).reverse();
+        return input.equals(reversed.toString());
+    }
+}
+
+
+4. WAP to count the number of consonants, vowels, special characters in a String.
+Answer :
+public class CountCharacters {
+    public static void main(String[] args) {
+        String input = "Hello, World!";
+        int[] counts = countCharacters(input);
+        System.out.println("Vowels: " + counts[0]);
+        System.out.println("Consonants: " + counts[1]);
+        System.out.println("Special Characters: " + counts[2]);
+    }
+
+    public static int[] countCharacters(String input) {
+        int[] counts = new int[3]; // [0] - vowels, [1] - consonants, [2] - special characters
+        input = input.toLowerCase();
+
+        for (char ch : input.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    counts[0]++; // Vowel
+                } else {
+                    counts[1]++; // Consonant
+                }
+            } else {
+                counts[2]++; // Special Character
+            }
+        }
+        return counts;
+    }
+}
+
+
+5. WAP to implement Anagram Checking least inbuilt methods being used.
+Answer :
+public class AnagramCheck {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+        boolean areAnagrams = checkAnagrams(str1, str2);
+        System.out.println("Are the strings anagrams? " + areAnagrams);
+    }
+
+    public static boolean checkAnagrams(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        int[] charCount = new int[256];
+
+        for (char ch : str1.toCharArray()) {
+            charCount[ch]++;
+        }
+
+        for (char ch : str2.toCharArray()) {
+            charCount[ch]--;
+        }
+
+        for (int count : charCount) {
+            if (count != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+
+6. WAP to implement Pangram Checking with least inbuilt methods being used.
+Answer :
+public class PangramCheck {
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over the lazy dog";
+        boolean isPangram = checkPangram(sentence);
+        System.out.println("Is the sentence a pangram? " + isPangram);
+    }
+
+    public static boolean checkPangram(String sentence) {
+        boolean[] alphabet = new boolean[26];
+        sentence = sentence.toLowerCase();
+
+        for (char ch : sentence.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') {
+                alphabet[ch - 'a'] = true;
+            }
+        }
+
+        for (boolean isPresent : alphabet) {
+            if (!isPresent) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+
+7. WAP to find if String contains all unique characters.
+Answer :
+public class UniqueCharactersCheck {
+    public static void main(String[] args) {
+        String input = "abcdefg";
+        boolean hasUniqueChars = checkUniqueCharacters(input);
+        System.out.println("Does the string contain all unique characters? " + hasUniqueChars);
+    }
+
+    public static boolean checkUniqueCharacters(String input) {
+        boolean[] charSet = new boolean[256];
+
+        for (char ch : input.toCharArray()) {
+            if (charSet[ch]) {
+                return false; // Duplicate character found
+            }
+            charSet[ch] = true;
+        }
+
+        return true; // No duplicate characters found
+    }
+}
+
+
+8. WAP to find the maximum occurring character in a String.
+Answer :
+public class MaxOccurringCharacter {
+    public static void main(String[] args) {
+        String input = "programming";
+        char maxChar = findMaxOccurringCharacter(input);
+        System.out.println("Maximum occurring character: " + maxChar);
+    }
+
+    public static char findMaxOccurringCharacter(String input) {
+        int[] charCount = new int[256];
+
+        for (char ch : input.toCharArray()) {
+            charCount[ch]++;
+        }
+
+        char maxChar = '\0';
+        int maxCount = 0;
+
+        for (int i = 0; i < charCount.length; i++) {
+            if (charCount[i] > maxCount) {
+                maxCount = charCount[i];
+                maxChar = (char) i;
+            }
+        }
+
+        return maxChar;
+    }
+}
