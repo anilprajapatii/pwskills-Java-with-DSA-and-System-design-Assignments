@@ -1,0 +1,38 @@
+1. What is a Constructor?
+Ans : - A constructor is a special method in object-oriented programming that is used for initializing objects. It is called automatically when an object is created. Constructors typically initialize the attributes or properties of an object, ensuring that the object is in a valid state after it is created.
+
+2. What is Constructor Chaining?
+Ans : - Constructor chaining refers to the process of calling one constructor from another within the same class or in the parent class. This allows for reusability of code and ensures that common initialization logic is not duplicated across multiple constructors.
+
+3. Can we call a subclass constructor from a superclass constructor?
+Ans : - No, a subclass constructor cannot be directly called from a superclass constructor. Constructors are invoked in a top-down manner, starting from the superclass constructor. However, the subclass constructor implicitly calls the superclass constructor using the `super()` keyword.
+
+4. What happens if you keep a return type for a constructor?
+Ans :  - Constructors do not have a return type, including void. If you try to specify a return type for a constructor, it will result in a compilation error.
+ 
+5. What is No-argumentuments constructor?
+Ans : - A no-argument constructor is a constructor that takes no arguments. It is also known as a default constructor. If no constructors are defined in a class, the compiler automatically provides a default no-argument constructor.
+
+6. How is a No-argumentument constructor different from the default Constructor?
+Ans : - A no-argumentument constructor and a default constructor essentially refer to the same thing. Both terms are used interchangeably to describe a constructor that takes no parameters. If no constructors are explicitly defined in a class, the compiler provides a default no-argument constructor.
+
+7. When do we need Constructor Overloading?
+Ans :  - Constructor overloading is needed when you want to create objects with different initial states or when you want to provide multiple ways to initialize an object. It allows a class to have multiple constructors with different parameter lists, and the appropriate constructor is called based on the arguments provided during object creation.
+
+8. What is Default constructor Explain with an Example
+Ans : if a class does not explicitly define any constructors, the compiler automatically adds a default constructor to the class. The default constructor is a no-argument constructor that initializes the object with default values or performs minimal initialization. 
+ 
+Example:
+
+public class MyClass {
+    // This class does not have any explicit constructors
+    
+    // Other fields and methods can be added here
+    
+    public static void main(String[] args) {
+        // Creating an object of MyClass using the default constructor
+        MyClass myObject = new MyClass();
+        
+        // Perform operations or access methods on the created object
+    }
+}
