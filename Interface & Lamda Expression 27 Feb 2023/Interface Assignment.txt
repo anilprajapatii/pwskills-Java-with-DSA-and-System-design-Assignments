@@ -1,0 +1,45 @@
+1. What is an interface in Java?
+Ans : An interface in Java is a collection of abstract methods (methods without a body) and constants. It provides a way to achieve abstraction in Java, allowing the definition of method signatures without specifying their implementation. Interfaces are used to achieve multiple inheritance in Java.
+
+2. Which modifiers are allowed for methods in an Interface? Explain with an example
+Ans : In an interface, methods are implicitly public and abstract. Additionally, default and static methods can have implementations.
+   
+   Example:
+   
+   public interface MyInterface {
+       // Implicitly public and abstract
+       void abstractMethod();
+
+       // Default method with implementation
+       default void defaultMethod() {
+           System.out.println("This is a default method.");
+       }
+
+       // Static method with implementation
+       static void staticMethod() {
+           System.out.println("This is a static method.");
+       }
+   }
+   
+
+3. What is the use of an interface in Java? Or, why do we use an interface in Java?
+Ans : Interfaces in Java serve several purposes:
+     - Achieving Abstraction: Interfaces allow the definition of method signatures without providing their implementation, promoting abstraction.
+     - Multiple Inheritance: Java supports multiple interface inheritance, enabling a class to implement multiple interfaces.
+     - Contract Enforcement: Classes that implement an interface must provide concrete implementations for all the methods declared in the interface, ensuring a specific contract is followed.
+
+4. What is the difference between an abstract class and an interface in Java?
+Ans : 
+   -Abstract Class:
+     - Can have both abstract and concrete methods.
+     - Supports the use of access modifiers (public, private, protected) for methods.
+     - Can have instance variables (fields).
+     - Allows constructors.
+     - Supports the use of the "extends" keyword for inheritance.
+
+   - Interface:
+     - Contains only abstract methods (prior to Java 8) or can include default and static methods (Java 8 and later).
+     - All methods are implicitly public and abstract.
+     - Can only have constant fields (static final variables), not instance variables.
+     - No constructors are allowed.
+     - Supports the use of the "implements" keyword for class implementation.
