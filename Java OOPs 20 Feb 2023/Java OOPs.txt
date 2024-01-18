@@ -1,0 +1,69 @@
+1. What is Inheritance in Java?
+Answer: Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class (subclass or derived class) to inherit properties and behaviors (fields and methods) from another class (superclass or base class). This facilitates code reuse, extensibility, and the creation of a hierarchical relationship between classes.
+
+2. What is superclass and subclass?
+Answer: A superclass is the class whose properties and behaviors are inherited by another class called a subclass. The subclass, in turn, extends or specializes the features of the superclass, gaining access to its members and methods.
+
+3. How is Inheritance implemented/achieved in Java?
+Answer: In Java, inheritance is achieved using the `extends` keyword. A subclass is declared by extending a superclass. For example:
+     java
+     class Superclass {
+         // superclass members and methods
+     }
+
+     class Subclass extends Superclass {
+         // subclass members and methods, inherits from Superclass
+     }
+     
+
+4. What is polymorphism?
+Answer: Polymorphism is the ability of a class to take on multiple forms. In Java, polymorphism can be achieved through method overloading and method overriding.
+
+5. Differentiate between method overloading and overriding.
+Answer: Method overloading involves defining multiple methods in the same class with the same name but different parameters. Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass.
+
+6. What's abstraction explained with an example?
+Answer: Abstraction is the process of hiding the implementation details and showing only the essential features of an object. For example, a car can be abstracted as an object with properties like speed, color, and methods like start and stop, without revealing the internal engine mechanisms.
+
+7. What is the difference between an abstract method and final method in Java? Explain with an example.
+Answer: An abstract method is declared in an abstract class and is meant to be implemented by its subclasses. A final method, on the other hand, is a method that cannot be overridden by its subclasses. Example:
+     java
+     abstract class AbstractClass {
+         abstract void abstractMethod(); // Abstract method
+         final void finalMethod() {
+             // Final method implementation
+         }
+     }
+     
+
+8. What is the final class in Java?
+Answer: A final class in Java is a class that cannot be subclassed. It prevents the extension of the class to ensure that its implementation cannot be altered or overridden.
+
+9. Differentiate between abstraction and encapsulation.
+Answer: Abstraction is about hiding the complexity and showing only the essential features of an object, while encapsulation is about bundling the data (attributes) and methods that operate on the data into a single unit, i.e., a class.
+
+10. Difference between Runtime and compile time polymorphism explained with an example.
+ Answer: Compile-time polymorphism (method overloading) occurs at compile time, where the method to be invoked is determined based on the method signature. Runtime polymorphism (method overriding) occurs at runtime, where the method to be executed is determined dynamically based on the actual object. Example:
+      java
+      class Animal {
+          void sound() {
+              System.out.println("Animal makes a sound");
+          }
+      }
+
+      class Dog extends Animal {
+          void sound() {
+              System.out.println("Dog barks");
+          }
+      }
+
+      public class PolymorphismExample {
+          public static void main(String[] args) {
+              Animal animal1 = new Animal();
+              Animal animal2 = new Dog();
+
+              animal1.sound(); // Output: Animal makes a sound
+              animal2.sound(); // Output: Dog barks
+          }
+      }
+      
