@@ -1,0 +1,25 @@
+1. What do you mean by Multithreading? Why it is important.
+Ans :   Multithreading is a programming concept that allows multiple threads to execute independently within a single program. A thread is the smallest unit of a process, and multithreading enables concurrent execution of multiple threads, improving the overall efficiency and responsiveness of a program. It is important because it helps utilize the CPU more effectively, enables parallelism, and enhances the performance of applications by allowing them to perform multiple tasks simultaneously.
+
+2. What are the benefits of using Multithreading:
+Ans :  a. Improved Performance: Multithreading can lead to improved performance by allowing parallel execution of tasks.
+   b. Concurrency: Different threads can execute independently, enabling concurrent processing of tasks.
+   c. Responsiveness: Multithreading enhances the responsiveness of applications, as one thread can continue execution while others may be blocked or waiting.
+
+3. What is Thread in Java:
+Ans :     In Java, a thread is the smallest unit of execution within a program. It is a lightweight, independent path of execution that runs concurrently with other threads. Threads in Java are instances of the "Thread" class or objects that implement the "Runnable" interface.
+
+4. What are the two ways of implementing thread in Java:
+Ans :     a. Extending the Thread class: By creating a new class that extends the "Thread" class and overriding its "run" method.
+   b. Implementing the Runnable interface: By implementing the "Runnable" interface and providing the implementation for the "run" method. This approach is often preferred as it allows for better class design and reusability.
+
+5. What's the difference between thread and process:
+Ans :   a. Process: A process is an independent program in execution, with its own memory space and resources. Processes do not share memory and communicate through inter-process communication (IPC).
+   b. Thread: A thread is the smallest unit of a process, sharing the same memory space and resources with other threads in the same process. Threads communicate through shared memory, making communication between them more efficient.
+
+6. How can we create daemon threads:
+Ans :   In Java, you can create daemon threads by calling the "setDaemon(true)" method on a "Thread" object before starting it. Daemon threads are background threads that do not prevent the program from exiting if they are the only threads running.
+
+7. What are the wait() and sleep() methods:
+Ans :  a. wait(): The "wait()" method in Java is used for causing the current thread to wait until another thread invokes the "notify()" or "notifyAll()" methods for the same object. It is typically used in the context of synchronization and inter-thread communication.
+   b. sleep(): The "sleep()" method is used to pause the execution of the current thread for a specified amount of time. It is often used for introducing delays or timeouts in a program. Unlike "wait()", "sleep()" does not release the lock on an object.
