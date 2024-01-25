@@ -1,0 +1,105 @@
+1. Program to display current date and time in Java:
+Ans : You can achieve this by creating a "Date" object and formatting it using "SimpleDateFormat". Here's an example:
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class CurrentDateTime {
+    public static void main(String[] args) {
+        // Creating a Date object to get the current date and time
+        Date currentDate = new Date();
+
+        // Formatting the date to a readable format
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        String formattedDate = dateFormat.format(currentDate);
+
+        // Displaying the current date and time
+        System.out.println("Current Date and Time: " + formattedDate);
+    }
+}
+
+
+2. Write a program to convert a date to a string in the format "MM/dd/yyyy”.
+
+Ans : You can use "SimpleDateFormat" to achieve this. Here's an example:
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateToString {
+    public static void main(String[] args) {
+        // Creating a Date object
+        Date currentDate = new Date();
+
+        // Formatting the date to the desired format
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        String formattedDate = sdf.format(currentDate);
+
+        // Displaying the formatted date
+        System.out.println("Formatted Date: " + formattedDate);
+    }
+}
+
+
+3. What is the difference between collections and streams? Explain with an Example.
+
+Ans : Collections deal with in-memory data structures, allowing storage and manipulation of a group of objects. Streams, on the other hand, represent a sequence of elements and focus on processing elements in a functional and declarative way. Here's an example:
+
+// Using Collection to find even numbers
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+List<Integer> evenNumbers = new ArrayList<>();
+
+for (Integer num : numbers) {
+    if (num % 2 == 0) {
+        evenNumbers.add(num);
+    }
+}
+System.out.println("Even Numbers (using Collections): " + evenNumbers);
+
+// Using Stream to find even numbers
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+List<Integer> evenNumbers = numbers.stream()
+                                   .filter(num -> num % 2 == 0)
+                                   .collect(Collectors.toList());
+System.out.println("Even Numbers (using Streams): " + evenNumbers);
+
+
+4. What is enums in Java? Explain with an example.
+
+Ans : Enums (enumerations) in Java are a special data type used to define collections of constants. They provide a way to create named constant values. Here's an example:
+
+public enum DaysOfWeek {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+}
+
+public class EnumExample {
+    public static void main(String[] args) {
+        // Using an enum variable
+        DaysOfWeek day = DaysOfWeek.MONDAY;
+        System.out.println("Today is: " + day);
+    }
+}
+
+
+5. What are built-in annotations in Java?
+
+Ans : Yes, Java provides several built-in annotations. Some common ones include:
+
+- "@Override": Indicates that a method in a subclass is intended to override a method in its superclass.
+- "@Deprecated": Marks a class, method, or field as deprecated, signaling that it should no longer be used.
+- "@SuppressWarnings": Instructs the compiler to suppress specific warnings.
+
+Example:
+
+
+public class DeprecatedExample {
+    @Deprecated
+    public void oldMethod() {
+        // Old implementation
+    }
+
+    public static void main(String[] args) {
+        DeprecatedExample example = new DeprecatedExample();
+        example.oldMethod(); // Generates a warning about using deprecated method
+    }
+}
