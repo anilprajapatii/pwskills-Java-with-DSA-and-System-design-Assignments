@@ -1,0 +1,42 @@
+1. What is Input and Output Stream in Java?
+Answer: In Java, an input stream is a mechanism for reading data from a source, and an output stream is a mechanism for writing data to a destination. These streams provide a way to perform I/O operations, allowing data to be read from or written to different sources or destinations, such as files, network connections, or in-memory data structures.
+
+
+2. What are the methods of OutputStream?
+Answer: Some common methods of the "OutputStream" class in Java include "write(int b)", "write(byte[] b)", "flush()", and "close()". These methods are used for writing bytes or byte arrays to the output stream, flushing the stream, and closing the stream, respectively.
+
+
+3. What is serialization in Java?
+Answer: Serialization in Java refers to the process of converting an object into a byte stream, which can be easily saved to a file or transmitted over a network. This byte stream can later be deserialized, reconstructing the original object. Serialization is mainly used for the persistence of objects and for communication between distributed systems.
+
+
+4. What is the Serializable interface in Java?
+Answer: The "Serializable" interface in Java is a marker interface that indicates a class can be serialized. By implementing the "Serializable" interface, a class informs the Java runtime that its objects can be converted into a byte stream. This allows instances of the class to be saved to files, sent over networks, or stored in databases.
+
+
+5. What is deserialization in Java?
+Answer: Deserialization in Java is the process of reconstructing an object from a byte stream. It is the reverse of serialization. Deserialization involves reading a byte stream and converting it back into an object, allowing the data to be used as an instance of the original class.
+
+
+6. How is serialization achieved in Java?
+Answer: Serialization in Java is achieved by implementing the "Serializable" interface in the class whose objects need to be serialized. Additionally, the class may define a "serialVersionUID" to control versioning. The "ObjectOutputStream" class is then used to write objects to a byte stream.
+
+
+7. How is deserialization achieved in Java?
+Answer: Deserialization in Java is achieved by implementing the "Serializable" interface in the class and using the "ObjectInputStream" class to read the byte stream and reconstruct the object. The class's default constructor is used during deserialization.
+
+
+8. How can you avoid certain member variables of class from getting Serialized?
+Answer: To avoid certain member variables from getting serialized in Java, mark them as "transient". The "transient" keyword indicates to the serialization mechanism that the variable should not be serialized. When an object is deserialized, transient variables are set to their default values.
+
+
+9. What classes are available in the Java IO File Classes API?
+Answer: Some classes in the Java IO File Classes API include:
+     - "File": Represents a file or directory pathname.
+     - "FileInputStream": Used for reading streams of raw bytes from a file.
+     - "FileOutputStream": Used for writing streams of raw bytes to a file.
+     - "FileReader" and "FileWriter": Used for reading and writing characters to a file.
+     - "BufferedReader" and "BufferedWriter": Provide buffering for efficient reading and writing of characters.
+
+10. What is the Difference between Externalizable and Serialization interface?
+Answer: The "Serializable" interface in Java is a marker interface that allows an object to be serialized automatically. On the other hand, the "Externalizable" interface extends "Serializable" and provides custom control over the serialization and deserialization process. Classes implementing "Externalizable" must provide their own serialization and deserialization methods ("writeExternal" and "readExternal"). This allows for more fine-grained control over the process, but it requires more manual implementation compared to the automatic serialization provided by the "Serializable" interface.
