@@ -1,7 +1,6 @@
 //1. Write a Program(WAP) to print Alphabets A, B, C, D, E, F, G, H, using pattern programming logic
-class LoopsAndPatternPrograms{
-    public static void main(String args[]){
-        
+class Q1{
+    public void alphabets(){
         int n=10; 
 
         // Printing "A"
@@ -133,4 +132,36 @@ class LoopsAndPatternPrograms{
         System.out.println();
        }
     }
+}
+
+class Q2{
+    public void triangle(){
+        int n = 10;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                if (k % 2 == 0) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+class LoopsAndPatternPrograms{
+    public static void main(String args[]){
+        
+    // Q1 obj1 = new Q1();
+    // obj1.alphabets();
+
+    Q2 obj2 = new Q2();
+    obj2.triangle();
+        
+}
 }
