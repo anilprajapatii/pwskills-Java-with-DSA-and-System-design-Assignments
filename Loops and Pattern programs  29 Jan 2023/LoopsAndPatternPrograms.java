@@ -153,15 +153,72 @@ class Q2{
     }
 }
 
+class Q3{
+    public void temple(){
+        // int n = 10;
+        // for (int i = 1; i <= n; i++) {
+        //     for (int j = 1; j <= n - i; j++) {
+        //         System.out.print(" ");
+        //     }
+        //     for (int k = 1; k <= (2 * i - 1); k++) {
+        //         if (k % 2 == 0) {
+        //             System.out.print(" ");
+        //         } else {
+        //             System.out.print("*");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+    }
+}
+
+class Q4{
+    public void PWSKILLS(){
+        int n=10;
+        for(int i=1;i<=n;i++)
+       {
+        for(int j=1;j<=n;j++){
+            if(i==1||j==1||i==n/2||j==n && i<n/2){
+                System.out.print("*");
+            }
+            else{
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+       }
+
+       System.out.println();
+
+       for(int i=1;i<=n;i++)
+       {
+        for(int j=1;j<=n;j++){
+            if(j==1||j==n||i==j && i>5||i==8 && j==4){
+                System.out.print("*");
+            }
+            else{
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+       }
+    }
+}
 
 class LoopsAndPatternPrograms{
     public static void main(String args[]){
         
-    // Q1 obj1 = new Q1();
-    // obj1.alphabets();
+    Q1 obj1 = new Q1();
+    obj1.alphabets();
 
     Q2 obj2 = new Q2();
     obj2.triangle();
+
+    Q3 obj3 = new Q3();
+    obj3.temple();
+
+    Q4 obj4 = new Q4();
+    obj4.PWSKILLS();
         
 }
 }
