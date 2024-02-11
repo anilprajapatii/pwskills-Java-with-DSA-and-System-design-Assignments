@@ -32,9 +32,28 @@ public class oneToFiveQ {
             }
         }
     }
+    public static void Q3(int[] arr){
+            if (arr == null || arr.length == 0) {
+                throw new IllegalArgumentException("Array is empty or null");
+            }
+    
+            int max = arr[0];
+    
+            for (int i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+    
+            System.out.println(max);
+        }
+    
 
     public static void main(String[] args) {
+        
         Q1();
         Q2();
+        Q3(new int[]{4, 6, 9, 2, 7});
+        
     }
 }
