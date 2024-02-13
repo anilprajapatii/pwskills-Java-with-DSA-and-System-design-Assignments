@@ -79,15 +79,27 @@
                 System.out.println(secondLargest);
             }
 
+            public static void Q5(){
+                // Q5: Given an array. Find the first peak element in the array. A peak element is an element that is greater than
+                // its just left and just right neighbor.
+                // Input 1: arr[] = {1,3,2,6,5}
+                // Output 1: 6
+                // Input 2: arr[] = {1 4,7,3,2,6,5}
+                // Output 1: 7
+
+                System.out.println("DID NOT GET THE QUESTION");
+                
+            }
+
             
         
 
         public static void main(String[] args) {
             
-            // Q1();
-            // Q2();
-            // Q3(new int[]{4, 6, 9, 2, 7});
+            Q1();
+            Q2();
+            Q3(new int[]{4, 6, 9, 2, 7});
             Q4(new int[]{34, 56, 69, 92, 47});
-            
+            Q5();  
         }
     }
