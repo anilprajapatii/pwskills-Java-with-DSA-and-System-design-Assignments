@@ -57,7 +57,34 @@ public class oneToFiveQ {
         System.out.println("Number of even numbers: " + evenCount);
         System.out.println("Number of zeros: " + zeroCount);
     }
+    static public void Q2(){
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Reading the size of the square matrix
+        System.out.print("Enter the size of the square matrix: ");
+        int n = scanner.nextInt();
+
+        // Input: Reading the elements of the matrix
+        System.out.println("Enter the elements of the matrix row-wise:");
+        int[][] matrix = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+    
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i + j < n - 1) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+    }
     public static void main(String[] args) {
         Q1();
+        Q2();
+        
     }
 }
+
