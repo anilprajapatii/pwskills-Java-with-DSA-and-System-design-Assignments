@@ -58,6 +58,10 @@ public class oneToFiveQ {
         System.out.println("Number of zeros: " + zeroCount);
     }
     static public void Q2(){
+
+        // Q2: write a program to print the elements above the secondary diagonal in a user inputted
+        // square matrix.
+
         Scanner scanner = new Scanner(System.in);
 
         // Input: Reading the size of the square matrix
@@ -81,10 +85,47 @@ public class oneToFiveQ {
             }
         }
     }
+
+    static public void Q3(){
+
+        // Q3: write a program to print the elements of both the diagonals in a user inputted square matrix
+        // in any order.
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the square matrix: ");
+        int n = scanner.nextInt();
+        
+        int[][] matrix = new int[n][n];
+        
+        System.out.println("Enter the elements of the matrix:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        int n1 = matrix.length;
+         // Print elements of the main diagonal
+         System.out.print("Main Diagonal Elements: ");
+         for (int i = 0; i < n1; i++) {
+             System.out.print(matrix[i][i] + " ");
+         }
+         System.out.println();
+         
+         // Print elements of the other diagonal
+         System.out.print("Other Diagonal Elements: ");
+         for (int i = 0; i < n1; i++) {
+            System.out.print(matrix[i][n1 - 1 - i] + " ");
+         }
+         System.out.println();
+    }
     public static void main(String[] args) {
         Q1();
         Q2();
+        Q3();
         
     }
 }
+
+
 
