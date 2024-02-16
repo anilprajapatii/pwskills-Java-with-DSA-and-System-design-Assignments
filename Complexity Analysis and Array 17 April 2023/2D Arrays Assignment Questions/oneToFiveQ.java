@@ -119,11 +119,41 @@ public class oneToFiveQ {
          }
          System.out.println();
     }
+
+    static public void Q4(){
+        Scanner scanner = new Scanner(System.in);
+
+        // Input the number of rows and columns in the array
+        System.out.println("Enter the number of rows:");
+        int rows = scanner.nextInt();
+        System.out.println("Enter the number of columns:");
+        int columns = scanner.nextInt();
+
+        // Input the elements of the array
+        System.out.println("Enter the elements of the 2D array:");
+        int[][] array = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                array[i][j] = scanner.nextInt();
+            }
+        }
+        int largest = array[0][0];
+
+     for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array[0].length; j++) {
+            if (array[i][j] > largest) {
+                largest = array[i][j];
+            }
+        }
+    }
+    System.out.println("The largest element in the 2D array is: " + largest);
+}
     public static void main(String[] args) {
-        Q1();
-        Q2();
-        Q3();
-        
+        // Q1();
+        // Q2();
+        // Q3();
+        Q4();
+       
     }
 }
 
